@@ -1,0 +1,123 @@
+name: Release Holo v11 Native Launchers
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  release-linux-x86_64:
+    name: Build, verify & publish Linux x86_64 Holo v11 launchers
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Compile holo-devtools-launcher, libsample_engine_plugin.so & stage BMP splashes
+        run: |
+          set -euo pipefail
+          rm -rf dist-v11 release-out
+          mkdir -p dist-v11 release-out
+
+          cc -std=c11 -O2 -Wall -Wextra -Werror -shared -fPIC \
+            -Iide/launchers \
+            ide/launchers/sample_engine_plugin.c \
+            -o dist-v11/libsample_engine_plugin.so
+
+          cc -std=c11 -O2 -Wall -Wextra -Werror \
+            -Iide/launchers \
+            ide/launchers/holo_devtools_cli.c \
+            ide/launchers/dynamic_loader.c \
+            ide/launchers/splash_blitter.c \
+            -ldl \
+            -o dist-v11/holo-devtools-launcher
+
+          cp ide/launchers/assets/*.bmp dist-v11/
+          ls -lh dist-v11/
+
+      - name: Verify standalone CLI execution (B8G_ABI_MAGIC_V3 0x33564742)
+        run: |
+          set -euo pipefail
+          CLI_STDOUT="$(LD_LIBRARY_PATH=./dist-v11 ./dist-v11/holo-devtools-launcher ./dist-v11/libsample_engine_plugin.so)"
+          echo "$CLI_STDOUT"
+          echo "$CLI_STDOUT" | grep -q '0x33564742'
+          echo "$CLI_STDOUT" | grep -q 'B8G_ABI_MAGIC_V3'
+
+      - name: Pack tarball, emit holo-v11-manifest.json & SHA512SUMS.txt
+        run: |
+          set -euo pipefail
+          tar --sort=name --mtime='UTC 2026-01-01' --owner=0 --group=0 --numeric-owner \
+            -czf release-out/devtools-launchers-linux-x86_64-holo-v11.tar.gz \
+            -C dist-v11 .
+
+          node --input-type=module -e '
+            import { createHash } from "node:crypto";
+            import { readdirSync, readFileSync, writeFileSync } from "node:fs";
+            import { join } from "node:path";
+
+            const sha512Hex = (buf) => createHash("sha512").update(buf).digest("hex");
+            const casEntry = (name, dir) => {
+              const buf = readFileSync(join(dir, name));
+              const sha512 = sha512Hex(buf);
+              return {
+                name,
+                bytes: buf.byteLength,
+                sha512,
+                casPath: `v11/files/${sha512.slice(0, 2)}/${sha512}`,
+              };
+            };
+
+            const contents = readdirSync("dist-v11").sort().map((n) => casEntry(n, "dist-v11"));
+            const bundle = casEntry("devtools-launchers-linux-x86_64-holo-v11.tar.gz", "release-out");
+
+            const manifest = {
+              schema: "awesome-os.holo-v11-devtools-launchers.v1",
+              repository: "awesome-os/devtools",
+              releaseTag: "v11-devtools-launchers-latest",
+              platform: "linux-x86_64",
+              abiMagic: "0x33564742",
+              casLayout: "v11",
+              casRegistry: "awesome-os/holo-v11",
+              commit: process.env.GITHUB_SHA ?? null,
+              generatedAt: new Date().toISOString(),
+              bundle,
+              contents,
+            };
+
+            writeFileSync(
+              "release-out/holo-v11-manifest.json",
+              JSON.stringify(manifest, null, 2) + "\n",
+            );
+          '
+
+          (cd release-out && sha512sum devtools-launchers-linux-x86_64-holo-v11.tar.gz holo-v11-manifest.json > SHA512SUMS.txt)
+          cat release-out/SHA512SUMS.txt
+          ls -lh release-out/
+
+      - name: Upload assets to GitHub Release v11-devtools-launchers-latest
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TAG="v11-devtools-launchers-latest"
+          ASSETS=(
+            release-out/devtools-launchers-linux-x86_64-holo-v11.tar.gz
+            release-out/holo-v11-manifest.json
+            release-out/SHA512SUMS.txt
+          )
+          if gh release view "$TAG" -R "${{ github.repository }}" >/dev/null 2>&1; then
+            gh release upload "$TAG" "${ASSETS[@]}" --clobber -R "${{ github.repository }}"
+          else
+            gh release create "$TAG" "${ASSETS[@]}" -R "${{ github.repository }}" \
+              --title "Awesome-OS DevTools Holo v11 Native Launchers" \
+              --notes "Standalone C11 Holo v11 dynamic launcher (\`holo-devtools-launcher\`), companion \`libsample_engine_plugin.so\` (\`B8G_ABI_MAGIC_V3\` \`0x33564742\`), and all 7 branded 24-bit BMP splashscreens."
+          fi

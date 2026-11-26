@@ -103,6 +103,27 @@ test('C11 dynamic loader compiles companion shared library (.dll/.so) and verifi
       assert.ok(stdout.includes('palettes=7'));
       assertValidBmp24(outBmp);
     }
+
+    const cliExePath = join(workDir, process.platform === 'win32' ? 'holo-devtools-launcher.exe' : 'holo-devtools-launcher');
+    const cliFlags = [
+      '-std=c11',
+      '-O2',
+      '-Wall',
+      '-Wextra',
+      '-Werror',
+      `-I${HERE}`,
+      join(HERE, 'holo_devtools_cli.c'),
+      join(HERE, 'dynamic_loader.c'),
+      join(HERE, 'splash_blitter.c'),
+      '-o',
+      cliExePath,
+      ...(process.platform === 'linux' ? ['-ldl'] : []),
+    ];
+    runC11Compiler(comp, cliFlags);
+    assert.equal(existsSync(cliExePath), true);
+
+    const cliStdout = execFileSync(cliExePath, [pluginPath], { encoding: 'utf8' });
+    assert.match(cliStdout, /PASS: holo-devtools-launcher verified B8G_ABI_MAGIC_V3 \(0x33564742\)/);
   } finally {
     rmSync(workDir, { recursive: true, force: true });
   }

@@ -8,7 +8,7 @@ test('verifyDevToolsAlignment passes across all 3 IDEs, 6 extensions, 4 game eng
   assert.equal(res.idesVerified, 3);
   assert.equal(res.extensionsVerified, 6);
   assert.equal(res.gameEnginesVerified, 4);
-  assert.equal(res.launcherSourcesVerified, 8);
+  assert.equal(res.launcherSourcesVerified, 9);
   assert.equal(res.splashesVerified, 7);
   assert.equal(res.researchDocsVerified, 3);
   assert.deepEqual(res.legacyReferencesFound, []);
