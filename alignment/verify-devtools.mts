@@ -57,7 +57,7 @@ const LEGACY_PATTERN = /b8g-ghost|B8G_GHOST|(?<![a-zA-Z0-9-])cas-v1(?![0-9])/g;
 
 function walkRepoFiles(dir: string, out: string[]): void {
   for (const ent of readdirSync(dir, { withFileTypes: true })) {
-    if (ent.name === '.git' || ent.name === 'node_modules') continue;
+    if (ent.name === '.git' || ent.name === 'node_modules' || ent.name === '.holo-ci-runtime') continue;
     const full = join(dir, ent.name);
     if (ent.isDirectory()) {
       walkRepoFiles(full, out);
