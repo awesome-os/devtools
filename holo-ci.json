@@ -5,7 +5,9 @@
   "tests": [
     "node alignment/verify-devtools.mts",
     "node --test alignment/verify-devtools.test.mts",
-    "node --test ide/launchers/launchers.test.mts"
+    "node --test ide/launchers/launchers.test.mts",
+    "node --test ide/game-engines/b8g-graphics/abi-golden.test.mts",
+    "node --test ide/game-engines/b8g-graphics/b8g-graphics.test.mts"
   ],
   "docs": [
     "README.md"

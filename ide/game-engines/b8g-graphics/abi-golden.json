@@ -1,0 +1,94 @@
+{
+  "schema": "holo-abi-golden.v1",
+  "module": "b8g-graphics",
+  "header": "sections/b8g-graphics/b8g_graphics_abi.h",
+  "source": "sections/b8g-graphics/b8g_graphics_core.c",
+  "constants": {
+    "B8G_GRAPHICS_ABI_MAGIC": "0x58464742",
+    "B8G_GRAPHICS_ABI_VERSION": 1,
+    "B8G_ABI_MAGIC_V3": "0x33564742",
+    "B8G_GRAPHICS_CAP_VISBUF": 1,
+    "B8G_GRAPHICS_CAP_ORCA_GI": 2,
+    "B8G_GRAPHICS_CAP_RESTIR": 4,
+    "B8G_GRAPHICS_CAP_NEURAL_BRDF": 8,
+    "B8G_GRAPHICS_CAP_3DGS_HYBRID": 16
+  },
+  "structs": {
+    "B8gVisBufHeaderC": {
+      "sizeof": 32,
+      "alignof": 4,
+      "offsets": {
+        "magic": 0,
+        "abi_version": 4,
+        "width": 8,
+        "height": 12,
+        "visbuf_bytes": 16,
+        "hzb_levels": 20,
+        "tile_size": 24,
+        "flags": 28
+      }
+    },
+    "B8gMeshletBoundsC": {
+      "sizeof": 64,
+      "alignof": 4,
+      "offsets": {
+        "center_radius": 0,
+        "aabb_min": 16,
+        "aabb_max": 32,
+        "tri_offset": 48,
+        "tri_count": 52,
+        "instance_id": 56,
+        "material_id": 60
+      }
+    },
+    "B8gOrcaCellC": {
+      "sizeof": 32,
+      "alignof": 4,
+      "offsets": {
+        "radiance_sum": 0,
+        "sample_count": 12,
+        "frame_epoch": 16,
+        "cell_hash": 20,
+        "pad": 24
+      }
+    },
+    "B8gReservoirLayerC": {
+      "sizeof": 48,
+      "alignof": 4,
+      "offsets": {
+        "sample_pos": 0,
+        "weight_sum": 12,
+        "radiance": 16,
+        "depth": 28,
+        "normal": 32,
+        "m_count": 44
+      }
+    },
+    "B8gGaussianSplatC": {
+      "sizeof": 64,
+      "alignof": 4,
+      "offsets": {
+        "pos": 0,
+        "scale": 16,
+        "quat": 32,
+        "color_opacity": 48
+      }
+    },
+    "B8gGraphicsDispatchTable": {
+      "sizeof": 64,
+      "alignof": 8,
+      "offsets": {
+        "magic": 0,
+        "abi_version": 4,
+        "struct_size": 8,
+        "caps": 12,
+        "pack64": 16,
+        "hzb_downsample_2x2": 24,
+        "orca_hash_cell": 32,
+        "restir_neighbor_compatible": 40,
+        "neural_brdf_eval": 48,
+        "eval_tile_gaussian": 56
+      }
+    }
+  }
+}
