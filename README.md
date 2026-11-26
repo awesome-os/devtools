@@ -34,10 +34,12 @@ Unified Awesome-OS DevTools Monorepo consolidating IDEs, VS Code / Open VSX exte
 
 ### 4. Native C11 Dynamic Launchers & 24-Bit BMP Splashes (`ide/launchers/`)
 
+- [`holo_devtools_cli.c`](ide/launchers/holo_devtools_cli.c): Standalone C11 CLI launcher (`holo-devtools-launcher`) over `dynamic_loader.c` and `splash_blitter.c`, verifying `B8G_ABI_MAGIC_V3 = 0x33564742`.
 - [`splash_blitter.c`](ide/launchers/splash_blitter.c) & [`splash_blitter.h`](ide/launchers/splash_blitter.h): C11 24-bit uncompressed BMP splashscreen generator with branded palettes (`godot`, `blender`, `unity`, `unreal`, `asymmetric-hunt`, `code-oss`, `theia`) and Holo v11 SHA-512 progress bar.
 - [`dynamic_loader.c`](ide/launchers/dynamic_loader.c) & [`dynamic_loader.h`](ide/launchers/dynamic_loader.h): Native C11 dynamic loader (`LoadLibraryA`/`GetProcAddress` on Windows, `dlopen`/`dlsym` on POSIX) verifying `B8G_ABI_MAGIC_V3 = 0x33564742`, updating 24-bit BMP splash progress (`25% -> 70% -> 100%`), and invoking `b8g_engine_entry_v3`.
 - [`sample_engine_plugin.c`](ide/launchers/sample_engine_plugin.c) & [`launcher_selftest.c`](ide/launchers/launcher_selftest.c): End-to-end dynamic shared library (`.dll`/`.so`) + splash verification harness.
 - [`generate-splashes.mts`](ide/launchers/generate-splashes.mts) & [`launchers.test.mts`](ide/launchers/launchers.test.mts): Deterministic `480x180` 24-bit BMP asset generator (`ide/launchers/assets/*.bmp`) and native compile/exec suite.
+- **Live Native Release ([`v11-devtools-launchers-latest`](https://github.com/awesome-os/devtools/releases/tag/v11-devtools-launchers-latest)):** Built and verified via [`.github/workflows/release-v11-launchers.yml`](.github/workflows/release-v11-launchers.yml) on `linux-x86_64` — publishing `holo-devtools-launcher`, `libsample_engine_plugin.so`, 7 branded 24-bit BMP splashscreens in `devtools-launchers-linux-x86_64-holo-v11.tar.gz`, `holo-v11-manifest.json`, and `SHA512SUMS.txt`.
 
 ### 5. Research (`research/`)
 
@@ -45,11 +47,12 @@ Unified Awesome-OS DevTools Monorepo consolidating IDEs, VS Code / Open VSX exte
 - [`03-rage9-vs-b8g-holonomic-game-engine.md`](research/03-rage9-vs-b8g-holonomic-game-engine.md)
 - [`04-holonomic-entity-section-visual-physics-identity.md`](research/04-holonomic-entity-section-visual-physics-identity.md)
 
-## Verification
+## Verification & `holo-ci@v1`
 
-Run the complete test suite and alignment lock verifier on Node 22+ (`erasableSyntaxOnly: true`, zero build step):
+Verified across **`88/88` tests** (`npm test`) and centralized **`holo-ci@v1`** ([`.github/workflows/holo-ci.yml`](.github/workflows/holo-ci.yml) + [`holo-ci.json`](holo-ci.json)) on Node 22+ (`erasableSyntaxOnly: true`, zero build step):
 
 ```bash
 npm test
 node alignment/verify-devtools.mts
+holo-ci verify --cwd .
 ```
