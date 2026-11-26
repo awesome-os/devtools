@@ -1,0 +1,28 @@
+name: Holo-E2E
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  packages: read
+
+jobs:
+  holo-e2e:
+    uses: awesome-os/maintenance-workflows/.github/workflows/reusable-holo-e2e.yml@v1
+    with:
+      config-path: holo-ci.json
+      holo-ci-ref: v1
+      e2e-command: |
+        node alignment/verify-devtools.mts
+        node --test alignment/verify-devtools.test.mts ide/launchers/launchers.test.mts
+        gcc -std=c11 -O2 -Wall -Wextra -Werror -shared -fPIC -Iide/launchers ide/launchers/sample_engine_plugin.c -o /tmp/libsample_engine_plugin.so
+        gcc -std=c11 -O2 -Wall -Wextra -Werror -Iide/launchers ide/launchers/launcher_selftest.c ide/launchers/dynamic_loader.c ide/launchers/splash_blitter.c -ldl -o /tmp/launcher_selftest
+        /tmp/launcher_selftest /tmp/libsample_engine_plugin.so "$HOLO_E2E_ARTIFACTS/devtools-selftest.bmp"
+        gcc -std=c11 -O2 -Wall -Wextra -Werror -Iide/launchers ide/launchers/holo_devtools_cli.c ide/launchers/dynamic_loader.c ide/launchers/splash_blitter.c -ldl -o /tmp/holo-devtools-launcher
+        /tmp/holo-devtools-launcher /tmp/libsample_engine_plugin.so godot "$HOLO_E2E_ARTIFACTS/devtools-cli.bmp"
+        cp -f ide/launchers/assets/*.bmp "$HOLO_E2E_ARTIFACTS/"
