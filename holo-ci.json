@@ -1,0 +1,17 @@
+{
+  "schema": "holo-ci.v1",
+  "name": "devtools",
+  "kind": "monorepo",
+  "tests": [
+    "node alignment/verify-devtools.mts",
+    "node --test alignment/verify-devtools.test.mts",
+    "node --test ide/launchers/launchers.test.mts"
+  ],
+  "docs": [
+    "README.md"
+  ],
+  "guards": {
+    "zeroGhost": true,
+    "zeroCasV1": true
+  }
+}
