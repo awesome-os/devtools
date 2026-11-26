@@ -1,0 +1,16 @@
+{
+  "name": "@awesome-os/devtools",
+  "version": "1.0.0",
+  "description": "Unified Awesome-OS DevTools Monorepo: IDEs (Code-OSS, Theia, B8G-IDE), VS Code Extensions, Game Engines (B8G Game Engine, Asymmetric Hunt 3D, Godot, Blender), and Dynamic-Loading Native C11 Splashscreen Launchers over Holo v11 CAS",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "test": "node --test alignment/verify-devtools.test.mts ide/launchers/launchers.test.mts ide/b8g-ide/b8g-ide.test.mts ide/code-oss/test/code-oss-cas.test.mts ide/theia/test/theia-cas.test.mts ide/extensions/stealifylang-vscode/test/stealifylang-vscode.test.mts ide/extensions/obs-vscode/test/obs-vscode.test.mts ide/extensions/godot-vscode/test/godot-vscode.test.mts ide/extensions/blender-vscode/test/blender-vscode.test.mts ide/extensions/unity-vscode/test/unity-vscode.test.mts ide/extensions/unreal-vscode/test/unreal-vscode.test.mts ide/game-engines/b8g-game-engine/b8g-game-engine.test.mts ide/game-engines/b8g-game-engine/b8g-world.test.mts ide/game-engines/b8g-game-engine/collision-physics.test.mts ide/game-engines/b8g-game-engine/obb-sat-section.test.mts ide/game-engines/b8g-game-engine/spatial-audio.test.mts ide/game-engines/b8g-game-engine/telemetry-ring.test.mts ide/game-engines/asymmetric-hunt/hunt.test.mts ide/game-engines/godot/test/godot-cas.test.mts ide/game-engines/blender/test/blender-cas.test.mts",
+    "verify": "node alignment/verify-devtools.mts",
+    "splashes": "node ide/launchers/generate-splashes.mts"
+  }
+}

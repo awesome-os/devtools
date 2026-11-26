@@ -1,0 +1,159 @@
+{
+  "schema": "holo-compiler-lockfile-v1",
+  "abiMagic": "0x33564742",
+  "casLayout": "v11",
+  "repo": "awesome-os/blender",
+  "targets": [
+    "linux-arm64",
+    "linux-x64",
+    "macos-arm64",
+    "win64"
+  ],
+  "generatedAt": "2026-11-24T23:53:02.473Z",
+  "dependencies": [
+    {
+      "id": "awesome-os/blender/blender-linux-arm64",
+      "kind": "ghost-launcher",
+      "version": "v0.1.0",
+      "target": "linux-arm64",
+      "sha512": "47f827961d635078185172d56706916ac5a4462d9df7b08c78cd64b3ff60e2eeb68945efb0818086e879ae77310557b9321b1c2728a304565374bdf6dc5ef2ab",
+      "size": 43928,
+      "executable": true,
+      "blob": "v11/files/47/47f827961d635078185172d56706916ac5a4462d9df7b08c78cd64b3ff60e2eeb68945efb0818086e879ae77310557b9321b1c2728a304565374bdf6dc5ef2ab-exec",
+      "url": "https://github.com/awesome-os/blender/releases/download/v0.1.0/blender-linux-arm64",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/blender/blender-linux-arm64",
+      "kind": "bin",
+      "version": "v0.2.0",
+      "target": "linux-arm64",
+      "sha512": "928566ec441baf9545a548f0c31046021ad372aade35171044834e6bf94f86310b319a5e8ba319d806391c26bad2897bb0cdd4bccaeb3d2c598b3a67de18e71a",
+      "size": 1173752,
+      "executable": true,
+      "blob": "v11/files/92/928566ec441baf9545a548f0c31046021ad372aade35171044834e6bf94f86310b319a5e8ba319d806391c26bad2897bb0cdd4bccaeb3d2c598b3a67de18e71a-exec",
+      "url": "https://github.com/awesome-os/blender/releases/download/v0.2.0/blender-linux-arm64",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/blender/blender-linux-x64",
+      "kind": "ghost-launcher",
+      "version": "v0.1.0",
+      "target": "linux-x64",
+      "sha512": "316a95b96c35ffa6380ae4048f9e026cebe6697e9e662829ab14b1801185f1341c91f1c65a73d169349a66b1c9250556331774086aa8113760e162449cc789da",
+      "size": 37624,
+      "executable": true,
+      "blob": "v11/files/31/316a95b96c35ffa6380ae4048f9e026cebe6697e9e662829ab14b1801185f1341c91f1c65a73d169349a66b1c9250556331774086aa8113760e162449cc789da-exec",
+      "url": "https://github.com/awesome-os/blender/releases/download/v0.1.0/blender-linux-x64",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/blender/blender-linux-x64",
+      "kind": "bin",
+      "version": "v0.2.0",
+      "target": "linux-x64",
+      "sha512": "42e209c0d4f9a2b663dbab5992a5c79f25af2060a741e09928f0f1c02f11d78725498e05c5e7fce94515e5061106cf368733a33b18e8c14fa1e641c0ada54060",
+      "size": 1117864,
+      "executable": true,
+      "blob": "v11/files/42/42e209c0d4f9a2b663dbab5992a5c79f25af2060a741e09928f0f1c02f11d78725498e05c5e7fce94515e5061106cf368733a33b18e8c14fa1e641c0ada54060-exec",
+      "url": "https://github.com/awesome-os/blender/releases/download/v0.2.0/blender-linux-x64",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/blender/blender-macos-arm64",
+      "kind": "ghost-launcher",
+      "version": "v0.1.0",
+      "target": "macos-arm64",
+      "sha512": "1df9f59fd7d576314e5b10ca068c5beff903c8b44bdc4abdc3d78febc370e20a0216a9cfba17fc5fef939853dbcde2229080ecbb6b2e9f4a5a00c04fb1bb3548",
+      "size": 51808,
+      "executable": true,
+      "blob": "v11/files/1d/1df9f59fd7d576314e5b10ca068c5beff903c8b44bdc4abdc3d78febc370e20a0216a9cfba17fc5fef939853dbcde2229080ecbb6b2e9f4a5a00c04fb1bb3548-exec",
+      "url": "https://github.com/awesome-os/blender/releases/download/v0.1.0/blender-macos-arm64",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/blender/blender-macos-arm64",
+      "kind": "ghost-launcher",
+      "version": "v0.2.0",
+      "target": "macos-arm64",
+      "sha512": "8c46923b0f632f5aad306561dbb47adc0468d67240644cc50bc3417d3732765fd8c2210d430ec1a6df87557595699de17a3af49a426ac470757cbdf865b3fcf0",
+      "size": 52096,
+      "executable": true,
+      "blob": "v11/files/8c/8c46923b0f632f5aad306561dbb47adc0468d67240644cc50bc3417d3732765fd8c2210d430ec1a6df87557595699de17a3af49a426ac470757cbdf865b3fcf0-exec",
+      "url": "https://github.com/awesome-os/blender/releases/download/v0.2.0/blender-macos-arm64",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/blender/blender.exe",
+      "kind": "ghost-launcher",
+      "version": "v0.1.0",
+      "target": "win64",
+      "sha512": "a86f15c83859102d2d80e318da6c31bddf1dfa836b5bd35bd636c71fdd83afcf9b0cb5e1695c9da3ff860442eff14399f6cb2ae18e583d26c5cb698ad9f13027",
+      "size": 119296,
+      "executable": true,
+      "blob": "v11/files/a8/a86f15c83859102d2d80e318da6c31bddf1dfa836b5bd35bd636c71fdd83afcf9b0cb5e1695c9da3ff860442eff14399f6cb2ae18e583d26c5cb698ad9f13027-exec",
+      "url": "https://github.com/awesome-os/blender/releases/download/v0.1.0/blender.exe",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/blender/blender.exe",
+      "kind": "ghost-launcher",
+      "version": "v0.2.0",
+      "target": "win64",
+      "sha512": "82b12ff9af38f0fcf6eb7422cfa2a2088cdc03a0ec3738cb5398d5c7f194044b3e137199c83e042a7c1abd000c585c5d45be2b643a024ed250b6049615bea011",
+      "size": 186880,
+      "executable": true,
+      "blob": "v11/files/82/82b12ff9af38f0fcf6eb7422cfa2a2088cdc03a0ec3738cb5398d5c7f194044b3e137199c83e042a7c1abd000c585c5d45be2b643a024ed250b6049615bea011-exec",
+      "url": "https://github.com/awesome-os/blender/releases/download/v0.2.0/blender.exe",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/blender/blender.pdb",
+      "kind": "object",
+      "version": "v0.2.0",
+      "target": "win64",
+      "sha512": "8232a5f45c7330b60ee72d7ac904e98b2ec0e2f1f80001e2efd8b1e1d125270cd63426aeb59f1dbbba11a7d673170784b04143cffc00cd9dd0903cbac4b2c4dd",
+      "size": 1187840,
+      "executable": false,
+      "blob": "v11/files/82/8232a5f45c7330b60ee72d7ac904e98b2ec0e2f1f80001e2efd8b1e1d125270cd63426aeb59f1dbbba11a7d673170784b04143cffc00cd9dd0903cbac4b2c4dd",
+      "url": "https://github.com/awesome-os/blender/releases/download/v0.2.0/blender.pdb",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/blender/install.ps1",
+      "kind": "object",
+      "version": "v0.2.0",
+      "target": "win64",
+      "sha512": "7a62d126e5209027f29c8475d760a6d7af8a9a5f9af75145d9a77f2e3efd05ab4f23ff2dc8f43141fc4c29a961bc4ff742ff29e5f7f7434f47f2477fbba658fb",
+      "size": 372,
+      "executable": false,
+      "blob": "v11/files/7a/7a62d126e5209027f29c8475d760a6d7af8a9a5f9af75145d9a77f2e3efd05ab4f23ff2dc8f43141fc4c29a961bc4ff742ff29e5f7f7434f47f2477fbba658fb",
+      "url": "https://github.com/awesome-os/blender/releases/download/v0.2.0/install.ps1",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/blender/install.sh",
+      "kind": "object",
+      "version": "v0.2.0",
+      "target": "any",
+      "sha512": "5c35d8a6e2e6d6b63cb387786f5e5c78e7fd37d452fb857ee234522f48411dc2343ae4a9dc385c56e32bc64509378967e336043b39a822ded3470df002e23123",
+      "size": 549,
+      "executable": true,
+      "blob": "v11/files/5c/5c35d8a6e2e6d6b63cb387786f5e5c78e7fd37d452fb857ee234522f48411dc2343ae4a9dc385c56e32bc64509378967e336043b39a822ded3470df002e23123-exec",
+      "url": "https://github.com/awesome-os/blender/releases/download/v0.2.0/install.sh",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/blender/SHA256SUMS.txt",
+      "kind": "object",
+      "version": "v0.2.0",
+      "target": "any",
+      "sha512": "583de6fa8a45594339606e0144e871328371096b3c24e93f1858982260db68f1eceec6141a6716782079d92ad6bd153760d60bb0df8dab320373c918ae9c79dc",
+      "size": 567,
+      "executable": false,
+      "blob": "v11/files/58/583de6fa8a45594339606e0144e871328371096b3c24e93f1858982260db68f1eceec6141a6716782079d92ad6bd153760d60bb0df8dab320373c918ae9c79dc",
+      "url": "https://github.com/awesome-os/blender/releases/download/v0.2.0/SHA256SUMS.txt",
+      "dependencies": []
+    }
+  ]
+}

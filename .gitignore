@@ -1,0 +1,9 @@
+node_modules/
+*.o
+*.obj
+*.pdb
+*.exe
+*.dll
+*.so
+*.dylib
+.b8g/

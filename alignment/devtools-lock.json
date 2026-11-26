@@ -1,0 +1,56 @@
+{
+  "schema": "awesome-os.devtools-lock.v1",
+  "abiMagic": "0x33564742",
+  "casLayout": "v11",
+  "casRegistry": "awesome-os/holo-v11",
+  "casEnvVar": "B8G_CAS_DIR",
+  "ides": [
+    { "id": "code-oss", "path": "ide/code-oss", "entry": "src/index.mts" },
+    { "id": "theia", "path": "ide/theia", "entry": "src/index.mts" },
+    { "id": "b8g-ide", "path": "ide/b8g-ide", "entry": "host/webrenderer-host.mts" }
+  ],
+  "extensions": [
+    { "id": "stealifylang-vscode", "path": "ide/extensions/stealifylang-vscode", "entry": "src/extension.mts" },
+    { "id": "obs-vscode", "path": "ide/extensions/obs-vscode", "entry": "src/extension.mts" },
+    { "id": "godot-vscode", "path": "ide/extensions/godot-vscode", "entry": "src/extension.mts" },
+    { "id": "blender-vscode", "path": "ide/extensions/blender-vscode", "entry": "src/extension.mts" },
+    { "id": "unity-vscode", "path": "ide/extensions/unity-vscode", "entry": "src/extension.mts" },
+    { "id": "unreal-vscode", "path": "ide/extensions/unreal-vscode", "entry": "src/extension.mts", "nativeHeader": "native/b8g_unreal_bridge.h" }
+  ],
+  "gameEngines": [
+    { "id": "b8g-game-engine", "path": "ide/game-engines/b8g-game-engine", "entry": "index.mts" },
+    { "id": "asymmetric-hunt", "path": "ide/game-engines/asymmetric-hunt", "entry": "index.mts" },
+    { "id": "godot", "path": "ide/game-engines/godot", "entry": "src/index.mts" },
+    { "id": "blender", "path": "ide/game-engines/blender", "entry": "src/index.mts" }
+  ],
+  "launchers": {
+    "path": "ide/launchers",
+    "sources": [
+      "splash_blitter.h",
+      "splash_blitter.c",
+      "dynamic_loader.h",
+      "dynamic_loader.c",
+      "sample_engine_plugin.c",
+      "launcher_selftest.c",
+      "generate-splashes.mts",
+      "launchers.test.mts"
+    ],
+    "bmpWidth": 480,
+    "bmpHeight": 180,
+    "bmpBpp": 24,
+    "splashBrands": [
+      "godot",
+      "blender",
+      "unity",
+      "unreal",
+      "asymmetric-hunt",
+      "code-oss",
+      "theia"
+    ]
+  },
+  "researchDocs": [
+    "research/01-asog-trigs-4d-gaussian-splatting-analysis.md",
+    "research/03-rage9-vs-b8g-holonomic-game-engine.md",
+    "research/04-holonomic-entity-section-visual-physics-identity.md"
+  ]
+}

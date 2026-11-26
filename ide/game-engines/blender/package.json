@@ -1,0 +1,37 @@
+{
+  "name": "@awesome-os/blender",
+  "version": "0.1.0",
+  "description": "Debloated rolling-latest Blender hydrated from awesome-os/holo-v11 with a ~118 KB native Lumi Hydration Splash launcher (Keep-Last-5, zero installer)",
+  "type": "module",
+  "main": "./src/index.mts",
+  "module": "./src/index.mts",
+  "types": "./src/index.mts",
+  "bin": {
+    "blender": "./src/cli.mts"
+  },
+  "exports": {
+    ".": "./src/index.mts",
+    "./hydrate": "./src/hydrate.mts",
+    "./cli": "./src/cli.mts"
+  },
+  "scripts": {
+    "test": "node --test test/blender-cas.test.mts"
+  },
+  "keywords": [
+    "blender",
+    "3d",
+    "debloated",
+    "holo-v11",
+    "awesome-os",
+    "cas",
+    "lumi-splash"
+  ],
+  "license": "GPL-3.0-or-later OR MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/awesome-os/blender.git"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "name": "blender-ghost",
+  "displayName": "Awesome-OS Blender 5.3 Ghost",
+  "description": "MIT Blender 5.3 extension for Awesome-OS Code - OSS & Eclipse Theia — instant holo-v11 holo-v11 Blender hydration, bpy script/addon live reload, and libsectium_display viewport bridge",
+  "version": "0.2.0",
+  "publisher": "awesome-os",
+  "license": "MIT",
+  "type": "module",
+  "main": "./src/extension.mts",
+  "module": "./src/extension.mts",
+  "types": "./src/extension.mts",
+  "exports": {
+    ".": "./src/extension.mts"
+  },
+  "engines": {
+    "vscode": "^1.85.0",
+    "node": ">=22.18.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Visualization",
+    "Other"
+  ],
+  "keywords": [
+    "blender",
+    "bpy",
+    "3d",
+    "holo-v11",
+    "sectium",
+    "code-oss",
+    "theia",
+    "awesome-os"
+  ],
+  "activationEvents": [
+    "onCommand:blenderGhost.hydrate",
+    "onCommand:blenderGhost.launch",
+    "onCommand:blenderGhost.runScript",
+    "onCommand:blenderGhost.reloadAddon",
+    "onLanguage:python"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "blenderGhost.hydrate",
+        "title": "Blender Ghost: Hydrate Blender 5.3 from holo-v11 holo-v11",
+        "category": "Blender Ghost"
+      },
+      {
+        "command": "blenderGhost.launch",
+        "title": "Blender Ghost: Launch Blender 5.3 with libsectium_display Bridge",
+        "category": "Blender Ghost"
+      },
+      {
+        "command": "blenderGhost.runScript",
+        "title": "Blender Ghost: Run Active bpy Script",
+        "category": "Blender Ghost"
+      },
+      {
+        "command": "blenderGhost.reloadAddon",
+        "title": "Blender Ghost: Live Reload Addon",
+        "category": "Blender Ghost"
+      }
+    ],
+    "taskDefinitions": [
+      {
+        "type": "blender-ghost",
+        "required": [
+          "action"
+        ],
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "hydrate",
+              "launch",
+              "runScript",
+              "reloadAddon"
+            ],
+            "description": "Blender Ghost task action to execute."
+          },
+          "script": {
+            "type": "string",
+            "description": "Path to a Python (bpy) script to execute in Blender."
+          },
+          "blendFile": {
+            "type": "string",
+            "description": "Optional .blend project file to open."
+          },
+          "addonModule": {
+            "type": "string",
+            "description": "Python module name of the Blender addon to live-reload."
+          },
+          "background": {
+            "type": "boolean",
+            "default": false,
+            "description": "Run Blender headless (-b / --background)."
+          },
+          "args": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Extra arguments forwarded to the Blender process."
+          }
+        }
+      }
+    ],
+    "configuration": {
+      "title": "Blender Ghost",
+      "properties": {
+        "blenderGhost.indexUrl": {
+          "type": "string",
+          "default": "https://raw.githubusercontent.com/awesome-os/holo-v11/main/index/cas-v11-global-manifest.json",
+          "description": "holo-v11 holo-v11 manifest index URL."
+        },
+        "blenderGhost.cacheDir": {
+          "type": "string",
+          "default": "",
+          "description": "Override local ~/.b8g/cas hydration cache directory."
+        },
+        "blenderGhost.pinnedSha256": {
+          "type": "string",
+          "default": "",
+          "description": "Optional Keep-Last-5 SHA-256 pin for deterministic Blender rollbacks."
+        },
+        "blenderGhost.enableSectiumViewport": {
+          "type": "boolean",
+          "default": true,
+          "description": "Attach libsectium_display viewport bridge over host pipe IPC."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "test": "node --test test/blender-vscode.test.mts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/awesome-os/blender-vscode.git"
+  },
+  "homepage": "https://github.com/awesome-os/blender-vscode#readme",
+  "bugs": {
+    "url": "https://github.com/awesome-os/blender-vscode/issues"
+  }
+}

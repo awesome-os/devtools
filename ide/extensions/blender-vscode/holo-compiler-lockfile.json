@@ -1,0 +1,40 @@
+{
+  "schema": "holo-compiler-lockfile-v1",
+  "abiMagic": "0x33564742",
+  "casLayout": "v11",
+  "repo": "awesome-os/blender-vscode",
+  "targets": [
+    "win64",
+    "linux-x64",
+    "linux-arm64",
+    "macos-arm64",
+    "wasm32-wasi"
+  ],
+  "generatedAt": "2026-11-24T23:53:02.473Z",
+  "dependencies": [
+    {
+      "id": "awesome-os/blender-vscode/blender-ghost-0.2.0.vsix",
+      "kind": "vsix",
+      "version": "v0.2.0",
+      "target": "any",
+      "sha512": "e7eee91f9db27f9f030f991826495e5d4d01badc111311bc1ef5793fd568a997d71e9caa923e2746a9f8b6eb25d5d8186f23a7c54642cd3425edfbec3d390ccc",
+      "size": 12971,
+      "executable": false,
+      "blob": "v11/files/e7/e7eee91f9db27f9f030f991826495e5d4d01badc111311bc1ef5793fd568a997d71e9caa923e2746a9f8b6eb25d5d8186f23a7c54642cd3425edfbec3d390ccc",
+      "url": "https://github.com/awesome-os/blender-vscode/releases/download/v0.2.0/blender-ghost-0.2.0.vsix",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/blender-vscode/SHA256SUMS.txt",
+      "kind": "object",
+      "version": "v0.2.0",
+      "target": "any",
+      "sha512": "6b09ea8f522e68b01c5ec2644e4a37a03fb1529ebaf86f4667ccc66b4ee994fbb78d62e5137646ec3c9665a8fb9dd4e793f02ed1eb8d5983b73d84accf145f79",
+      "size": 91,
+      "executable": false,
+      "blob": "v11/files/6b/6b09ea8f522e68b01c5ec2644e4a37a03fb1529ebaf86f4667ccc66b4ee994fbb78d62e5137646ec3c9665a8fb9dd4e793f02ed1eb8d5983b73d84accf145f79",
+      "url": "https://github.com/awesome-os/blender-vscode/releases/download/v0.2.0/SHA256SUMS.txt",
+      "dependencies": []
+    }
+  ]
+}

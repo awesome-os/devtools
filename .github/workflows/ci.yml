@@ -1,0 +1,42 @@
+name: DevTools CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Run all DevTools TypeScript & launcher suites
+        run: npm test
+
+      - name: Run alignment lock verifier
+        run: node alignment/verify-devtools.mts
+
+      - name: Compile and run native C11 dynamic loader (.so + selftest)
+        run: |
+          mkdir -p /tmp/b8g-ci
+          cc -std=c11 -O2 -Wall -Wextra -Werror -shared -fPIC \
+            -Iide/launchers \
+            ide/launchers/sample_engine_plugin.c \
+            -o /tmp/b8g-ci/sample_engine_plugin.so
+          cc -std=c11 -O2 -Wall -Wextra -Werror \
+            -Iide/launchers \
+            ide/launchers/launcher_selftest.c \
+            ide/launchers/dynamic_loader.c \
+            ide/launchers/splash_blitter.c \
+            -ldl \
+            -o /tmp/b8g-ci/launcher_selftest
+          /tmp/b8g-ci/launcher_selftest /tmp/b8g-ci/sample_engine_plugin.so /tmp/b8g-ci/godot-ci.bmp godot
+          rm -rf /tmp/b8g-ci

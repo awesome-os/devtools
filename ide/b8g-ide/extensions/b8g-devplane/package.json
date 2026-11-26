@@ -1,0 +1,65 @@
+{
+  "name": "b8g-devplane",
+  "displayName": "B8G DevPlane (Sectium WebRenderer Host Bridge)",
+  "description": "Supplies env, B8G_DISPLAY_V1 display surfaces, sandboxed fs, ttyS0 terminal, and DevTools streams to unmodified VS Code OSS running in Sectium WebRenderer.",
+  "version": "0.5.0",
+  "publisher": "awesome-os",
+  "license": "BSD-3-Clause",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other",
+    "Visualization"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onFileSystem:b8g-devplane"
+  ],
+  "main": "./src/extension.mts",
+  "browser": "./src/extension.mts",
+  "contributes": {
+    "commands": [
+      {
+        "command": "b8g.devplane.showEnv",
+        "title": "B8G DevPlane: Show Environment & Baseline"
+      },
+      {
+        "command": "b8g.devplane.rebindDisplayMode",
+        "title": "B8G DevPlane: Toggle 2D/3D Display Surface"
+      },
+      {
+        "command": "b8g.devplane.openTerminal",
+        "title": "B8G DevPlane: Open Shimmed ttyS0 Terminal"
+      }
+    ],
+    "terminal": {
+      "profiles": [
+        {
+          "id": "b8g-devplane.tty",
+          "title": "B8G DevPlane (b8g-shim ttyS0)"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "B8G DevPlane",
+      "properties": {
+        "b8g.devplane.pipePath": {
+          "type": "string",
+          "default": "\\\\.\\pipe\\sectium-dev",
+          "description": "Sectium Host Device Boundary pipe/socket path (zero local HTTP IPC)."
+        },
+        "b8g.devplane.baselineTag": {
+          "type": "string",
+          "default": "v0.5.0-baseline",
+          "description": "Pinned awesome-os/sectium-browser baseline release tag."
+        },
+        "b8g.devplane.brand": {
+          "type": "string",
+          "default": "Lumi White Dragon",
+          "description": "Active Sectium visual identity."
+        }
+      }
+    }
+  }
+}

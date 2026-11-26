@@ -1,0 +1,16 @@
+SPDX-License-Identifier: GPL-3.0-or-later OR MIT
+
+Copyright (c) 2026 Awesome-OS Contributors
+
+This repository's launcher, hydration scripts, and metadata are dual-licensed
+under either:
+
+- GNU General Public License v3.0 or later (GPL-3.0-or-later):
+  https://www.gnu.org/licenses/gpl-3.0.en.html
+- MIT License (MIT):
+  https://opensource.org/license/mit
+
+at your option.
+
+Upstream Blender binaries hydrated from awesome-os/holo-v11 remain
+governed by the upstream Blender Foundation GNU GPL-3.0-or-later license.

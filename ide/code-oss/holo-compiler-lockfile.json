@@ -1,0 +1,159 @@
+{
+  "schema": "holo-compiler-lockfile-v1",
+  "abiMagic": "0x33564742",
+  "casLayout": "v11",
+  "repo": "awesome-os/code-oss",
+  "targets": [
+    "linux-arm64",
+    "linux-x64",
+    "macos-arm64",
+    "win64"
+  ],
+  "generatedAt": "2026-11-24T23:53:02.473Z",
+  "dependencies": [
+    {
+      "id": "awesome-os/code-oss/code-oss-linux-arm64",
+      "kind": "ghost-launcher",
+      "version": "v0.2.0",
+      "target": "linux-arm64",
+      "sha512": "d47d6c5dab11c0cdc70a7e39fdf9bec7a93e8f959bc6104968453182007286bfed124d3520b3b5da17711ef2ffb253effd12f6391b96de34d2322778d33290fd",
+      "size": 44424,
+      "executable": true,
+      "blob": "v11/files/d4/d47d6c5dab11c0cdc70a7e39fdf9bec7a93e8f959bc6104968453182007286bfed124d3520b3b5da17711ef2ffb253effd12f6391b96de34d2322778d33290fd-exec",
+      "url": "https://github.com/awesome-os/code-oss/releases/download/v0.2.0/code-oss-linux-arm64",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/code-oss/code-oss-linux-arm64",
+      "kind": "bin",
+      "version": "v0.3.0",
+      "target": "linux-arm64",
+      "sha512": "7756caf45056aaeebd2a3a71b8ca674a5f78065e302be09a95721478b4dab7a0f66a63cd4efdf0ca0e575f2cabe7e52b6e9573d886f6ee0e5ed992f8e62a0f32",
+      "size": 1163632,
+      "executable": true,
+      "blob": "v11/files/77/7756caf45056aaeebd2a3a71b8ca674a5f78065e302be09a95721478b4dab7a0f66a63cd4efdf0ca0e575f2cabe7e52b6e9573d886f6ee0e5ed992f8e62a0f32-exec",
+      "url": "https://github.com/awesome-os/code-oss/releases/download/v0.3.0/code-oss-linux-arm64",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/code-oss/code-oss-linux-x64",
+      "kind": "ghost-launcher",
+      "version": "v0.2.0",
+      "target": "linux-x64",
+      "sha512": "64f03bb311e451597cbb04c09a18d7e5b6198158c002e64ef1370f61d4441e147f92d3efd9e639de18e23a96b6b8118f91bcea6f79283ed888fcbc363f1f50f9",
+      "size": 37968,
+      "executable": true,
+      "blob": "v11/files/64/64f03bb311e451597cbb04c09a18d7e5b6198158c002e64ef1370f61d4441e147f92d3efd9e639de18e23a96b6b8118f91bcea6f79283ed888fcbc363f1f50f9-exec",
+      "url": "https://github.com/awesome-os/code-oss/releases/download/v0.2.0/code-oss-linux-x64",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/code-oss/code-oss-linux-x64",
+      "kind": "bin",
+      "version": "v0.3.0",
+      "target": "linux-x64",
+      "sha512": "4b66e3ade562f47b90165de881870e2f31a10f4729ae97c7a367450f2c51bb9ba3bde9ce505c17b0bea7f3ffa61d0c5b93bc4ac591690c2a78400ef9799e1c40",
+      "size": 1108088,
+      "executable": true,
+      "blob": "v11/files/4b/4b66e3ade562f47b90165de881870e2f31a10f4729ae97c7a367450f2c51bb9ba3bde9ce505c17b0bea7f3ffa61d0c5b93bc4ac591690c2a78400ef9799e1c40-exec",
+      "url": "https://github.com/awesome-os/code-oss/releases/download/v0.3.0/code-oss-linux-x64",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/code-oss/code-oss-macos-arm64",
+      "kind": "ghost-launcher",
+      "version": "v0.2.0",
+      "target": "macos-arm64",
+      "sha512": "2ce092dae0a845af35f4d612f609d89a997d70d49f37019d00ec0fb2d5517b50a204d40cdbc0ef9b811c202fae9cca7e8a4034492688e98fbe55460aeee34362",
+      "size": 51896,
+      "executable": true,
+      "blob": "v11/files/2c/2ce092dae0a845af35f4d612f609d89a997d70d49f37019d00ec0fb2d5517b50a204d40cdbc0ef9b811c202fae9cca7e8a4034492688e98fbe55460aeee34362-exec",
+      "url": "https://github.com/awesome-os/code-oss/releases/download/v0.2.0/code-oss-macos-arm64",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/code-oss/code-oss-macos-arm64",
+      "kind": "ghost-launcher",
+      "version": "v0.3.0",
+      "target": "macos-arm64",
+      "sha512": "e0f406cca07411195ef92d0b0b436f58b1588422bbfddfcb92cd7148eeb2399491f5761aed3ea07bf824cb333a12204e7778a36ce127c355aed5fef7a3d13909",
+      "size": 52312,
+      "executable": true,
+      "blob": "v11/files/e0/e0f406cca07411195ef92d0b0b436f58b1588422bbfddfcb92cd7148eeb2399491f5761aed3ea07bf824cb333a12204e7778a36ce127c355aed5fef7a3d13909-exec",
+      "url": "https://github.com/awesome-os/code-oss/releases/download/v0.3.0/code-oss-macos-arm64",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/code-oss/code-oss.exe",
+      "kind": "ghost-launcher",
+      "version": "v0.2.0",
+      "target": "win64",
+      "sha512": "1647b2090d85e058edab6858893947dde45012c7de82aec3f1ce6d4b2074a0289cb11750d6902518d993a847b49ce5a8a2048c863615f7ad1792c0263487f856",
+      "size": 121344,
+      "executable": true,
+      "blob": "v11/files/16/1647b2090d85e058edab6858893947dde45012c7de82aec3f1ce6d4b2074a0289cb11750d6902518d993a847b49ce5a8a2048c863615f7ad1792c0263487f856-exec",
+      "url": "https://github.com/awesome-os/code-oss/releases/download/v0.2.0/code-oss.exe",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/code-oss/code-oss.exe",
+      "kind": "ghost-launcher",
+      "version": "v0.3.0",
+      "target": "win64",
+      "sha512": "422e3e36efeafc07dd41bb4ee6f2c821258519317a93494d02bb9dcbfa76370208f5612086739a36502c52020675742523047688b764bb7d8298dedcad7249e6",
+      "size": 188928,
+      "executable": true,
+      "blob": "v11/files/42/422e3e36efeafc07dd41bb4ee6f2c821258519317a93494d02bb9dcbfa76370208f5612086739a36502c52020675742523047688b764bb7d8298dedcad7249e6-exec",
+      "url": "https://github.com/awesome-os/code-oss/releases/download/v0.3.0/code-oss.exe",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/code-oss/code-oss.pdb",
+      "kind": "object",
+      "version": "v0.3.0",
+      "target": "win64",
+      "sha512": "b58d61526aeb5876fd94c36f3c29adc35f10e2266505acad6f9eb64446e2792ecbf9d8ec5a163b560c377623b0533f73b32726212e4fe5ef63170a534210db42",
+      "size": 1187840,
+      "executable": false,
+      "blob": "v11/files/b5/b58d61526aeb5876fd94c36f3c29adc35f10e2266505acad6f9eb64446e2792ecbf9d8ec5a163b560c377623b0533f73b32726212e4fe5ef63170a534210db42",
+      "url": "https://github.com/awesome-os/code-oss/releases/download/v0.3.0/code-oss.pdb",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/code-oss/install.ps1",
+      "kind": "object",
+      "version": "v0.3.0",
+      "target": "win64",
+      "sha512": "f7bc4ce0644c3c1ec2fe6a56c9d29e3f6b384cd38b6dcd2bc7484e1eb4ce60efd77ab5e5a9ccc21dab621ea72d5d39d4c1ee422241a1d43f25db4baad67ca26f",
+      "size": 378,
+      "executable": false,
+      "blob": "v11/files/f7/f7bc4ce0644c3c1ec2fe6a56c9d29e3f6b384cd38b6dcd2bc7484e1eb4ce60efd77ab5e5a9ccc21dab621ea72d5d39d4c1ee422241a1d43f25db4baad67ca26f",
+      "url": "https://github.com/awesome-os/code-oss/releases/download/v0.3.0/install.ps1",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/code-oss/install.sh",
+      "kind": "object",
+      "version": "v0.3.0",
+      "target": "any",
+      "sha512": "037a6243f3e0fc230910af656ea37ee36ddb5cc5134fc6fa3e0db86ab419718fe07aebd115ff56c021599421d2b7c4f2d211c367383131c3dc766e69a75df21c",
+      "size": 557,
+      "executable": true,
+      "blob": "v11/files/03/037a6243f3e0fc230910af656ea37ee36ddb5cc5134fc6fa3e0db86ab419718fe07aebd115ff56c021599421d2b7c4f2d211c367383131c3dc766e69a75df21c-exec",
+      "url": "https://github.com/awesome-os/code-oss/releases/download/v0.3.0/install.sh",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/code-oss/SHA256SUMS.txt",
+      "kind": "object",
+      "version": "v0.3.0",
+      "target": "any",
+      "sha512": "5fa8932616549de2e341c923bbf84e1f5962c5cee26e63fc0cf90968a189f0751b72dedd99c2067e304b6f0e7e7ba41370708b9aa43b362f032fb1147f25748b",
+      "size": 572,
+      "executable": false,
+      "blob": "v11/files/5f/5fa8932616549de2e341c923bbf84e1f5962c5cee26e63fc0cf90968a189f0751b72dedd99c2067e304b6f0e7e7ba41370708b9aa43b362f032fb1147f25748b",
+      "url": "https://github.com/awesome-os/code-oss/releases/download/v0.3.0/SHA256SUMS.txt",
+      "dependencies": []
+    }
+  ]
+}

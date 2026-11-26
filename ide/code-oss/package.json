@@ -1,0 +1,38 @@
+{
+  "name": "@awesome-os/code-oss",
+  "version": "0.1.0",
+  "description": "Telemetry-free Code - OSS (VS Code MIT) hydrated on shared Electron + holo-v11 CAS with a ~120 KB native launcher (zero 350 MB duplication)",
+  "type": "module",
+  "main": "./src/index.mts",
+  "module": "./src/index.mts",
+  "types": "./src/index.mts",
+  "bin": {
+    "code-oss": "./src/cli.mts"
+  },
+  "exports": {
+    ".": "./src/index.mts",
+    "./hydrate": "./src/hydrate.mts",
+    "./cli": "./src/cli.mts"
+  },
+  "scripts": {
+    "test": "node --test test/code-oss-cas.test.mts"
+  },
+  "keywords": [
+    "code-oss",
+    "vscode",
+    "vscodium",
+    "electron",
+    "holo-v11",
+    "awesome-os",
+    "cas",
+    "telemetry-free"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/awesome-os/code-oss.git"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  }
+}

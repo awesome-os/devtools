@@ -1,0 +1,52 @@
+{
+  "schema": "holo-compiler-lockfile-v1",
+  "abiMagic": "0x33564742",
+  "casLayout": "v11",
+  "repo": "awesome-os/b8g-ide",
+  "targets": [
+    "win64",
+    "linux-x64",
+    "linux-arm64",
+    "macos-arm64",
+    "wasm32-wasi"
+  ],
+  "generatedAt": "2026-11-24T23:53:02.473Z",
+  "dependencies": [
+    {
+      "id": "awesome-os/b8g-ide/b8g-devplane-extension.tar.gz",
+      "kind": "object",
+      "version": "v0.1.0",
+      "target": "any",
+      "sha512": "d5a827a949277b9026edd864b0292a0275b3e483e8e4e4ffc8520842282075bb45f99ab2c5724c05fa9cf53ab73c1cd6435eb09e927c62f9849242aad56e6f4e",
+      "size": 4828,
+      "executable": false,
+      "blob": "v11/files/d5/d5a827a949277b9026edd864b0292a0275b3e483e8e4e4ffc8520842282075bb45f99ab2c5724c05fa9cf53ab73c1cd6435eb09e927c62f9849242aad56e6f4e",
+      "url": "https://github.com/awesome-os/b8g-ide/releases/download/v0.1.0/b8g-devplane-extension.tar.gz",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/b8g-ide/b8g-ide-webrenderer-host.tar.gz",
+      "kind": "object",
+      "version": "v0.1.0",
+      "target": "any",
+      "sha512": "40c0da3e38feeac66c6cb5e9b3acaf6a11b9ab03028b9d854d23b3e465019c7b36061bb7e23d4df2dc084197e10717066fa499ef255a76ae43c514682150394d",
+      "size": 6932,
+      "executable": false,
+      "blob": "v11/files/40/40c0da3e38feeac66c6cb5e9b3acaf6a11b9ab03028b9d854d23b3e465019c7b36061bb7e23d4df2dc084197e10717066fa499ef255a76ae43c514682150394d",
+      "url": "https://github.com/awesome-os/b8g-ide/releases/download/v0.1.0/b8g-ide-webrenderer-host.tar.gz",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/b8g-ide/SHA256SUMS.txt",
+      "kind": "object",
+      "version": "v0.1.0",
+      "target": "any",
+      "sha512": "cbbcd9a448ca0c32a1d530d88d0e1193777227cf32de791d965933563b7d86922bba3cfee8e2b8ae62065a1a27a3db523ccaad68efe50aeefe5c1293e54471fa",
+      "size": 194,
+      "executable": false,
+      "blob": "v11/files/cb/cbbcd9a448ca0c32a1d530d88d0e1193777227cf32de791d965933563b7d86922bba3cfee8e2b8ae62065a1a27a3db523ccaad68efe50aeefe5c1293e54471fa",
+      "url": "https://github.com/awesome-os/b8g-ide/releases/download/v0.1.0/SHA256SUMS.txt",
+      "dependencies": []
+    }
+  ]
+}
