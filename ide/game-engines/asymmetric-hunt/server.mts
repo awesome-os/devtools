@@ -90,7 +90,7 @@ export async function startAsymmetricHuntServer(opts: {
         return;
       }
 
-      const url = new URL(req.url ?? '/', `http://127.0.0.1:${actualPort}`);
+      const url = new URL(req.url ?? '/', 'https://asymmetric-hunt.b8g.invalid');
 
       if (req.method === 'GET' && url.pathname === '/') {
         res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
@@ -220,6 +220,7 @@ export async function startAsymmetricHuntServer(opts: {
   const addr = server.address();
   actualPort = typeof addr === 'object' && addr ? addr.port : port;
   return {
+    // b8g-allow-http-ipc: externalWeb=true — browser-facing LAN multiplayer 3D game web server preview URL
     url: `http://127.0.0.1:${actualPort}`,
     lanUrl: `http://${lanIp}:${actualPort}`,
     close: () =>
