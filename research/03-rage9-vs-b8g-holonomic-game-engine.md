@@ -13,6 +13,8 @@ summary: "Rigorous technical comparison of Rockstar RAGE 9 (GTA 6 / RDR2), Unrea
 **Awesome-OS Target Stack:** [`sections/b8g-game-engine/`](../../sections/b8g-game-engine/) + [`b8g.app`](../../site/build-b8g-app.host.mts) Zero-Install Runner + [`sections/asog-4dgs/`](../../sections/asog-4dgs/)  
 **Date:** 2026-11-21
 
+<!-- DOC-STATIC-CORPUS -->
+
 ---
 
 ## 1. Executive Synthesis (The Core Thesis)
