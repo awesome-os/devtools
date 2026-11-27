@@ -27,10 +27,15 @@ Unified Awesome-OS DevTools Monorepo consolidating IDEs, VS Code / Open VSX exte
 
 | Engine | Path | Description |
 | :--- | :--- | :--- |
+| **B8G Graphics Engine** | [`ide/game-engines/b8g-graphics/`](ide/game-engines/b8g-graphics/README.md) | 64-bit `atomicMin` CuRast Visibility Buffer (`B8G_ARENA_V1`), Two-Pass HZB, ORCA + Multi-Layer ReSTIR GI, `7,060 B` Neural BRDF MLP, Tiled 3DGS, C11 ABI (`0x58464742`), and `three-compat` WebGPU adapter |
 | **B8G Game Engine** | [`ide/game-engines/b8g-game-engine/`](ide/game-engines/b8g-game-engine/index.mts) | Predictive streaming, `.b8p` CAS closure gate, $S^3$ quaternion physics, 15-axis OBB-SAT, spatial audio, telemetry ring, C11 ABI v3 |
 | **Asymmetric Hunt 3D** | [`ide/game-engines/asymmetric-hunt/`](ide/game-engines/asymmetric-hunt/index.mts) | 3v4 Compound & 1v4 Trials 3D survival-hunt engine, GLB drop-in loader, utility AI bots, LAN server |
 | **Godot** | [`ide/game-engines/godot/`](ide/game-engines/godot/README.md) | Rolling-latest MIT Godot 4 launcher + Holo v11 Keep-Last-5 CAS hydration |
 | **Blender** | [`ide/game-engines/blender/`](ide/game-engines/blender/README.md) | Rolling-latest Blender launcher + Holo v11 Keep-Last-5 CAS hydration |
+
+#### Zero-Copy Next-Gen Graphics Engine (`b8g-graphics`)
+
+[`ide/game-engines/b8g-graphics/README.md`](ide/game-engines/b8g-graphics/README.md) (tracked in [awesome-os#16](https://github.com/awesome-os/awesome-os/issues/16)) delivers a complete zero-copy rendering stack over `B8G_ARENA_V1` `SharedArrayBuffer`, WebGPU WGSL compute shaders (`visbuf-curast.wgsl`, `orca-restir.wgsl`, `neural-brdf-3dgs.wgsl`), and a `_Static_assert`-verified C11 `-O3` ABI (`B8G_GRAPHICS_ABI_MAGIC = 0x58464742`), paired with a thin `three-compat.mts` adapter (`Scene`, `PerspectiveCamera`, `BoxGeometry`, `NeuralMaterial`, `GaussianSplatMesh`, `B8gWebGPURenderer`) with zero upstream Three.js fork bloat.
 
 ### 4. Native C11 Dynamic Launchers & 24-Bit BMP Splashes (`ide/launchers/`)
 
