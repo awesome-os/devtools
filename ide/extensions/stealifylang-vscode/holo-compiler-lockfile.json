@@ -36,5 +36,14 @@
       "url": "https://github.com/awesome-os/stealifylang-vscode/releases/download/v1.1.0/stealifylang-vscode-1.1.0.vsix",
       "dependencies": []
     }
-  ]
+  ],
+  "lockfileVersion": 3,
+  "migrationsApplied": [
+    "v0->v1",
+    "v1->v2",
+    "v2->v3"
+  ],
+  "provenanceChain": {
+    "commitAndTreeBound": true
+  }
 }

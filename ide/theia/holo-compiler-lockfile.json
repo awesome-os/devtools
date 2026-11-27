@@ -48,5 +48,14 @@
       "url": "https://github.com/awesome-os/theia/releases/download/v0.2.1/theia-v0.2.1.tar.zst",
       "dependencies": []
     }
-  ]
+  ],
+  "lockfileVersion": 3,
+  "migrationsApplied": [
+    "v0->v1",
+    "v1->v2",
+    "v2->v3"
+  ],
+  "provenanceChain": {
+    "commitAndTreeBound": true
+  }
 }

@@ -48,5 +48,14 @@
       "url": "https://github.com/awesome-os/b8g-ide/releases/download/v0.1.0/SHA256SUMS.txt",
       "dependencies": []
     }
-  ]
+  ],
+  "lockfileVersion": 3,
+  "migrationsApplied": [
+    "v0->v1",
+    "v1->v2",
+    "v2->v3"
+  ],
+  "provenanceChain": {
+    "commitAndTreeBound": true
+  }
 }
