@@ -81,6 +81,23 @@ Exported symbols in [`three-compat.mts`](three-compat.mts):
 
 ---
 
+## C11 ABI Layout & Constants (`abi-golden.json`)
+
+<!-- AUTO-GENERATED:BEGIN source="abi-golden.json" id="section:abi:b8g-graphics" -->
+**ABI Golden Contract (`b8g-graphics`):** `abiMagic=0x33564742` · Header: [`b8g_graphics_abi.h`](./b8g_graphics_abi.h) · Manifest: [`abi-golden.json`](./abi-golden.json) · `6` struct(s) · `8` constant(s)
+
+| C11 Struct | `sizeof` (B) | `alignof` (B) | Fields / Offsets |
+| :--- | ---: | ---: | ---: |
+| `B8gGaussianSplatC` | 64 | 4 | 4 |
+| `B8gGraphicsDispatchTable` | 64 | 8 | 10 |
+| `B8gMeshletBoundsC` | 64 | 4 | 7 |
+| `B8gOrcaCellC` | 32 | 4 | 5 |
+| `B8gReservoirLayerC` | 48 | 4 | 6 |
+| `B8gVisBufHeaderC` | 32 | 4 | 8 |
+<!-- AUTO-GENERATED:END -->
+
+---
+
 ## Verification (`node --test`)
 
 Run both hermetic test suites directly on Node 22+ (zero build step):
