@@ -1,0 +1,130 @@
+{
+  "schema": "holo-abi-golden.v1",
+  "module": "b8g-game-engine",
+  "header": "ide/game-engines/b8g-game-engine/b8g_game_engine_abi.h",
+  "constants": {
+    "B8G_GAME_ENGINE_ABI_MAGIC": "0x45473842",
+    "B8G_GAME_ENGINE_ABI_VERSION_V2": "0x00020000",
+    "B8G_GAME_ENGINE_ABI_VERSION_V3": "0x00030000",
+    "B8G_GAME_SIM_TIER_1_FULL_PHYSICS": 1,
+    "B8G_GAME_SIM_TIER_2_SIMPLIFIED": 2,
+    "B8G_GAME_SIM_TIER_3_HORIZON_IMPOSTER": 3,
+    "B8G_GAME_CAP_VELOCITY_PREFETCH": 1,
+    "B8G_GAME_CAP_ASSET_CLOSURE_GATE": 2,
+    "B8G_GAME_CAP_S3_QUAT_PHYSICS": 4,
+    "B8G_GAME_CAP_FOOT_PLACEMENT_IK": 8,
+    "B8G_GAME_CAP_ARENA_V1_O1_PURGE": 16
+  },
+  "structs": {
+    "B8gVec3f64": {
+      "sizeof": 24,
+      "alignof": 8,
+      "offsets": {
+        "x": 0,
+        "y": 8,
+        "z": 16
+      }
+    },
+    "B8gQuatf64": {
+      "sizeof": 32,
+      "alignof": 8,
+      "offsets": {
+        "w": 0,
+        "x": 8,
+        "y": 16,
+        "z": 24
+      }
+    },
+    "B8gSectorCoordC": {
+      "sizeof": 16,
+      "alignof": 4,
+      "offsets": {
+        "sx": 0,
+        "sy": 4,
+        "sz": 8,
+        "tier": 12
+      }
+    },
+    "B8gEntityState64C": {
+      "sizeof": 64,
+      "alignof": 8,
+      "offsets": {
+        "entity_id": 0,
+        "px": 8,
+        "py": 16,
+        "pz": 24,
+        "vx": 32,
+        "vy": 40,
+        "vz": 48,
+        "flags": 56
+      }
+    },
+    "B8gFootContact32C": {
+      "sizeof": 32,
+      "alignof": 8,
+      "offsets": {
+        "x": 0,
+        "y": 8,
+        "z": 16,
+        "weight": 24
+      }
+    },
+    "B8gWorldStreamingDispatchTable": {
+      "sizeof": 24,
+      "alignof": 8,
+      "offsets": {
+        "update_streaming_bubble": 0,
+        "purge_sector_o1": 8,
+        "active_sector_count": 16
+      }
+    },
+    "B8gAssetClosureDispatchTable": {
+      "sizeof": 24,
+      "alignof": 8,
+      "offsets": {
+        "fnv64_bytes": 0,
+        "verify_asset_closure": 8,
+        "unique_block_count": 16
+      }
+    },
+    "B8gPhysicsDispatchTable": {
+      "sizeof": 24,
+      "alignof": 8,
+      "offsets": {
+        "step_fixed_s3": 0,
+        "sample_terrain_height": 8,
+        "solve_foot_placement": 16
+      }
+    },
+    "B8gArenaSlabDispatchTable": {
+      "sizeof": 24,
+      "alignof": 8,
+      "offsets": {
+        "acquire_slab": 0,
+        "wipe_and_release_o1": 8,
+        "active_slab_count": 16
+      }
+    },
+    "B8gGameEngineAbiTableV2": {
+      "sizeof": 32,
+      "alignof": 8,
+      "offsets": {
+        "magic": 0,
+        "abi_version": 4,
+        "streaming": 8,
+        "assets": 16,
+        "physics": 24
+      }
+    },
+    "B8gGameEngineAbiTable": {
+      "sizeof": 48,
+      "alignof": 8,
+      "offsets": {
+        "v2": 0,
+        "struct_size": 32,
+        "capability_flags": 36,
+        "arena_slab": 40
+      }
+    }
+  }
+}

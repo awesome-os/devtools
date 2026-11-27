@@ -1,7 +1,7 @@
 {
   "schema": "holo-abi-golden.v1",
   "module": "b8g-graphics",
-  "header": "sections/b8g-graphics/b8g_graphics_abi.h",
+  "header": "ide/game-engines/b8g-graphics/b8g_graphics_abi.h",
   "source": "sections/b8g-graphics/b8g_graphics_core.c",
   "constants": {
     "B8G_GRAPHICS_ABI_MAGIC": "0x58464742",

@@ -2,7 +2,7 @@
   "name": "@awesome-os/devtools",
   "version": "1.1.0",
   "description": "Unified Awesome-OS DevTools Monorepo: IDEs (Code-OSS, Theia, B8G-IDE), VS Code Extensions, Game Engines (B8G Game Engine, Asymmetric Hunt 3D, Godot, Blender), and Dynamic-Loading Native C11 Splashscreen Launchers over Holo v11 CAS",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "type": "module",
   "private": true,
   "engines": {
