@@ -1,0 +1,30 @@
+{
+  "schema": "holo-boundary.v1",
+  "plane": 4,
+  "publicEntrypoints": [
+    "alignment/verify-devtools.mts"
+  ],
+  "includePaths": [
+    "alignment",
+    "ide"
+  ],
+  "excludeDirs": [
+    ".git",
+    "node_modules",
+    "build",
+    "dist",
+    "out",
+    ".awesome-oci",
+    ".holo-ci-runtime"
+  ],
+  "forbiddenImports": [
+    "WidevineCdm",
+    "optimization_guide_internal",
+    "GoogleUpdate"
+  ],
+  "maxParentTraversals": 4,
+  "scanSourceHttpIpc": false,
+  "abiGoldenFiles": [
+    "ide/game-engines/b8g-graphics/abi-golden.json"
+  ]
+}
