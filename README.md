@@ -1,3 +1,5 @@
+<!-- DOC-STATIC-CORPUS -->
+
 # Awesome-OS DevTools (`awesome-os/devtools`)
 
 Unified Awesome-OS DevTools Monorepo consolidating IDEs, VS Code / Open VSX extensions, Game Engines, native C11 dynamic-loading splashscreen launchers, and 4DGS / Holonomic Game Engine research over **Holo v11 CAS** (`awesome-os/holo-v11`, `B8G_ABI_MAGIC_V3 = 0x33564742`).

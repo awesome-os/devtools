@@ -18,6 +18,7 @@ flowchart LR
 
 ## Verified File Inventory
 
+<!-- DOC-STATIC-REFERENCE -->
 | File | Role | Key Primitives / Contracts |
 | :--- | :--- | :--- |
 | [`index.mts`](index.mts) | Public barrel export | Re-exports all rasterizer, GI, neural/3DGS, and `three-compat` APIs |

@@ -1,3 +1,5 @@
+<!-- DOC-STATIC-CORPUS -->
+
 > [!NOTE] Consolidated into the unified Holo v11 OS monorepo at https://github.com/awesome-os/awesome-os
 
 # `@awesome-os/code-oss`
